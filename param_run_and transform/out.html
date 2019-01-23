@@ -1,0 +1,33 @@
+<html>
+<body>
+<h2>Test Results</h2>
+<table border="1">
+<tr bgcolor="#9acd32">
+<th style="text-align:left">Group</th><th style="text-align:left">Test</th><th style="text-align:left">Result</th><th style="text-align:left">Request</th><th style="text-align:left">Response</th><th style="text-align:left">Assertion</th>
+</tr>
+<tr>
+<td>sanity 1-1</td><td>JDBC Request count [SMARTBench].[dbo].[BenchLog]</td><td><font color="green"><b>passed</b></font></td><td>[Select Statement] select count(*) from [SMARTBench].[dbo].[BenchLog];
+
+</td><td>
+5615
+</td><td></td>
+</tr>
+<tr>
+<td>sprint1 2-1</td><td>JIRA-1234 - JDBC Request customer 125 </td><td><font color="red"><b>failed</b></font></td><td>[Select Statement] SELECT distinct
+      [Title],[Primary Skill]
+  FROM [SMARTBench].[dbo].[BenchLog]
+  where Name = 'Andrii Hanzha';
+
+</td><td>Cannot create PoolableConnectionFactory (Connection reset ClientConnectionId:78b43856-15ed-432a-98ec-33fc1252a5ce)</td><td>Test failed: text expected to equal /
+
+****** received  : [[[Cannot create PoolableConnectionFactory (Connection reset ClientConnectionId:78b43856-15ed-432a-98ec...]]]
+
+****** comparison: [[[Title	Primary Skill
+Software Engineering Manager	Project Management
+                                   ]]]
+
+/</td>
+</tr>
+</table>
+</body>
+</html>

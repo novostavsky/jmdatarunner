@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample ct="57" s="true" lb="JDBC Request count [SMARTBench].[dbo].[BenchLog]" rc="200" rm="OK" tn="sanity 1-1" sc="1" ec="0" hn="EPUALVIW0474">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:com.microsoft.sqlserver.jdbc.SQLServerDriver, url:jdbc:sqlserver://localhost:1434;, user:sa</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">
+5615
+</responseData>
+  <samplerData class="java.lang.String">[Select Statement] select count(*) from [SMARTBench].[dbo].[BenchLog];
+
+</samplerData>
+</sample>
+<sample ct="14720" s="false" lb="JIRA-1234 - JDBC Request customer 125 " rc="null 0" rm="java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection reset ClientConnectionId:78b43856-15ed-432a-98ec-33fc1252a5ce)" tn="sprint1 2-1" sc="1" ec="1" hn="EPUALVIW0474">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to equal /
+
+****** received  : [[[Cannot create PoolableConnectionFactory (Connection reset ClientConnectionId:78b43856-15ed-432a-98ec...]]]
+
+****** comparison: [[[Title	Primary Skill
+Software Engineering Manager	Project Management
+                                   ]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Cannot create PoolableConnectionFactory (Connection reset ClientConnectionId:78b43856-15ed-432a-98ec-33fc1252a5ce)</responseData>
+  <samplerData class="java.lang.String">[Select Statement] SELECT distinct
+      [Title],[Primary Skill]
+  FROM [SMARTBench].[dbo].[BenchLog]
+  where Name = &apos;Andrii Hanzha&apos;;
+
+</samplerData>
+</sample>
+
+</testResults>

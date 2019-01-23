@@ -1,0 +1,3 @@
+jmeter -n -t params_test.jmx -JrunMode=sprint1
+
+java -jar simpleTransform.jar jtree_results.xml transform.xslt out.html

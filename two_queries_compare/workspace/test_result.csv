@@ -1,0 +1,10 @@
+timeStamp,label,responseMessage,threadName,success,failureMessage
+1548238084440,JDBC Request,OK,Thread Group 1-1,true,
+1548238084487,JDBC Request,OK,Thread Group 1-1,true,
+1548238084532,JSR223 Sampler,OK,Thread Group 1-1,false,"Test failed: variable(diffNum) expected to equal /
+
+****** received  : [[[2]]]
+
+****** comparison: [[[0]]]
+
+/"
