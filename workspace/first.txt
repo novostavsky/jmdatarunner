@@ -1,0 +1,27 @@
+Primary Skill	
+.NET	15
+Android	5
+Automated Testing	11
+Automated Testing in .NET	2
+BI.Oracle BI EE	1
+Big Data	4
+Business Analysis	5
+Data Science	1
+Demandware	3
+DevOps/Automation	7
+DevOps/BigData	3
+Drupal	1
+DWBI	10
+Functional testing	5
+iOS Objective-C	2
+iOS Swift	4
+Java	19
+JavaScript	7
+Project Management	5
+Python	1
+RubyOnRails	1
+Software Maintenance	1
+Systems Engineering	1
+UX Design	1
+Visual Design	3
+WorkFusion	1
