@@ -1,7 +1,5 @@
 Primary Skill	
 .NET	15
-Android	5
-Automated Testing	11
 Automated Testing in .NET	2
 BI.Oracle BI EE	1
 Big Data	4

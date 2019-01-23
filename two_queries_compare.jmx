@@ -26,7 +26,7 @@
           </elementProp>
           <elementProp name="workspace" elementType="Argument">
             <stringProp name="Argument.name">workspace</stringProp>
-            <stringProp name="Argument.value">${__P(workspace,C:\Users\{user}\{folder})}</stringProp>
+            <stringProp name="Argument.value">${__P(workspace,~)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="resultFile1" elementType="Argument">
@@ -109,7 +109,7 @@ group by [Primary Skill]</stringProp>
         </JDBCSampler>
         <hashTree>
           <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
-            <stringProp name="FileSaver.filename">C:\Users\Volodymyr_Novostavsk\Desktop\first.txt</stringProp>
+            <stringProp name="FileSaver.filename">${workspace}\\${resultFile1}</stringProp>
             <boolProp name="FileSaver.errorsonly">false</boolProp>
             <boolProp name="FileSaver.successonly">true</boolProp>
             <boolProp name="FileSaver.skipsuffix">true</boolProp>
@@ -123,6 +123,7 @@ group by [Primary Skill]</stringProp>
 from [dbo].[BenchLog]
 where [run_date] = &apos;2018-01-04&apos;
  and  [for_month] = &apos;2018-01-01&apos;
+ and [Primary Skill] not in (&apos;Android&apos;, &apos;Automated Testing&apos;)
 group by [Primary Skill]</stringProp>
           <stringProp name="queryArguments"></stringProp>
           <stringProp name="queryArgumentsTypes"></stringProp>
@@ -134,7 +135,7 @@ group by [Primary Skill]</stringProp>
         </JDBCSampler>
         <hashTree>
           <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
-            <stringProp name="FileSaver.filename">C:\Users\Volodymyr_Novostavsk\Desktop\second.txt</stringProp>
+            <stringProp name="FileSaver.filename">${workspace}\\${resultFile2}</stringProp>
             <boolProp name="FileSaver.errorsonly">false</boolProp>
             <boolProp name="FileSaver.successonly">true</boolProp>
             <boolProp name="FileSaver.skipsuffix">true</boolProp>
@@ -182,15 +183,15 @@ vars.put(&quot;diffNum&quot;,diffNum.toString());</stringProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
+            <time>false</time>
+            <latency>false</latency>
             <timestamp>true</timestamp>
             <success>true</success>
             <label>true</label>
-            <code>true</code>
+            <code>false</code>
             <message>true</message>
             <threadName>true</threadName>
-            <dataType>true</dataType>
+            <dataType>false</dataType>
             <encoding>false</encoding>
             <assertions>true</assertions>
             <subresults>true</subresults>
@@ -203,15 +204,9 @@ vars.put(&quot;diffNum&quot;,diffNum.toString());</stringProp>
             <responseDataOnError>false</responseDataOnError>
             <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">${workspace}\\test_result.csv</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
